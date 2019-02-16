@@ -4,10 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript - MA03 - Question 1</title>
+    <style>
+        /*
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: sans-serif;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            max-height: 100vh;
+        }
+        form {
+            width: 40%;
+            margin: auto;
+            grid-row-start: 2; 
+            overflow: hidden;
+        }
+        h1 {
+            margin-bottom: 1rem;
+        }
+        input {
+            width: 100%;
+            padding: 0.3rem;
+            outline: 0;
+            border: 0.1rem solid transparent;
+            background: linear-gradient(to right,#dcf 0%,#ddf 20%);
+            padding: 0.3rem 0.3rem 0.3rem 0.5rem;
+        }
+        input:focus {
+            border-color: purple;
+            background: linear-gradient(to right,#dcf 0%,#ddf 50%);
+        }
+        form > p {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            position: relative;
+            margin-bottom: 0.5rem;
+            border-radius: 0.2rem;
+            margin: 0;
+            box-shadow: 0px -5px 15px rgba(0,0,0,0.1);
+        }
+        form > p > label  {
+            width: 100%;
+            height: 2.6rem;
+            background: purple;
+            padding-left: 0.3rem;
+            z-index: 1;
+        }
+        form > p > label > span:first-child {
+            border-radius: 0.1rem;
+            font-size: 0.6rem;
+            width: 100%;
+            max-height: 2rem;
+            line-height: 0.9rem;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.5);
+            font-weight: bold;
+            display: block;
+            margin-top: 0.4rem;
+        }
+        form > p > label > span:last-child {
+            border-radius: 0.1rem;
+            width: 100%;
+            line-height: 0.5rem;
+            display: block;
+            color: white;
+        }
+        button {
+            padding: 0.5rem 2rem;
+            outline: 0;
+            border: 0;
+            background: rgba(200,100,200,0.5);
+            cursor: pointer;
+            transform: scale(1);
+            float: right;
+            border-bottom-right-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
+        }
+        button:active {
+            transform: scale(0.95);
+        }
+        */
+    </style>
+</head>
 <body>
 
 <!--Contact Form-->
-
+<form action="" id="theform">
+   <h1>My form</h1>
+    <p>
+        <label for="firstname"><span>First </span><span>name:</span></label>
+        <input type="text" name="firstname" autocomplete="given-name">
+    </p>
+    <p>
+        <label for="firstname"><span>Last </span><span>name:</span></label>
+        <input type="text" name="lastname" autocomplete="family-name">
+    </p>
+    <p>
+        <label for="firstname"><span>Phone </span><span>number:</span></label>
+        <input type="tel" name="phone" autocomplete="tel">
+    </p>
+    <p>
+        <label for="email"><span>E-mail </span><span>adress:</span></label>
+        <input type="email" name="email" autocomplete="email">
+    </p>
+    <button type="button" form="theform" value="Submit">Submit</button>
+    
+</form>
 
 <script src="script.js"></script>
 </body>
