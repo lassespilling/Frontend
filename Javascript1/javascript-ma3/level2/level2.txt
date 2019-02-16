@@ -1,0 +1,21 @@
+JavaScript MA03
+----------------
+Level 2
+
+1. In your own words, describe what JavaScript Code Style is.
+
+2. What is a Regular Expression?
+
+3. What does the .random() method do?
+
+4. What does the .sort() method do?
+
+5. What does the .reverse() method do?
+
+6. List two examples of bad JavaScript code.
+
+7. What data types can a JSON object contain?
+
+8. What is minifying JavaScript Code?
+
+9. What is a global variable?
