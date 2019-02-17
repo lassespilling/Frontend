@@ -3,19 +3,30 @@ JavaScript MA03
 Level 2
 
 1. In your own words, describe what JavaScript Code Style is.
+A: The generally accepted guidelines for how code should look
 
 2. What is a Regular Expression?
+A: Creates and looks for patterns in text
 
 3. What does the .random() method do?
+A: Generates a random decimal number from 0-1
 
 4. What does the .sort() method do?
+A: Sorts elements from an array
 
 5. What does the .reverse() method do?
+A: Reverses the order of the array
 
 6. List two examples of bad JavaScript code.
+const value = 1;
+var value = 2; // const cannot be changed
+var emailPattern = /[a-z]@[a-z].[a-z]/; // dot can be anything and should be escaped
 
 7. What data types can a JSON object contain?
+A: 6 different ones: arrays, strings, objects, numbers, booleans and null
 
 8. What is minifying JavaScript Code?
+A: Minifying is a way of compressing javascript code to make it less taxing on the browser by reducing the javascript filesize. It can be done with HTML and CSS aswell, but often results in poor readability by removing whitespace and indents.
 
 9. What is a global variable?
+A: A variable that is in the global scope
