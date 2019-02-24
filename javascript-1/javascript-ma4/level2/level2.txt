@@ -10,12 +10,16 @@
 - document.querySelector('');
 
 // What is an asynchronous call?
+Asynchronous means starting something now then finishing it later.
+It does not "block" the code, but only initiates.
 
 // Briefly explain what the sources tab in Chromes Developers Tools does.
 - It's like an explorer for the sources of the code, allowing you to view the "tree" / hierarchy and edit / save files
 - It also allows you to create small "snippets": small pieces of code, easily accessed to be reused.
 
 // What is a JavaScript promise?
+A javascript promise is an object that represents an action that has not yet finished, but will at some point.
+Like a regular promise in real life, it is pending until it's fulfilled or rejected, then it's settled.
 
 // What is an API?
 - Short for Application Programming Interface
