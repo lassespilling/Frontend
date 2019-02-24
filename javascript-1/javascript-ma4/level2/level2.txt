@@ -1,0 +1,32 @@
+####### Level 2 Process #######
+
+// What is the DOM?
+- DOM stands for Document Object Model
+- It is a model that lets you manipulate objects in the document
+
+// List three methods to manipulate the DOM.
+- document.getElementById('');
+- document.getElemetsByTagName('');
+- document.querySelector('');
+
+// What is an asynchronous call?
+
+// Briefly explain what the sources tab in Chromes Developers Tools does.
+- It's like an explorer for the sources of the code, allowing you to view the "tree" / hierarchy and edit / save files
+- It also allows you to create small "snippets": small pieces of code, easily accessed to be reused.
+
+// What is a JavaScript promise?
+
+// What is an API?
+- Short for Application Programming Interface
+- A way to serve data
+
+// What is a JavaScript Event?
+- A javascript event occurs when the user or browser does something to the page (clicking, hovering, loading, etc)
+- Javascript can listen to these events and react when they are triggered
+
+// What is event bubbling?
+- Event Bubbling first happens on an element then on it's parents and up to it's ancestors. (Bubbles upwards)
+- Event capturing moves from the top and down, from document > body > main > div > a > span,
+  but event bubbling moves upwards, from span > a > div > main > body > document
+- It can trigger unwanted behavior by running on a parent when supposed to run on the child element, and can be stopped.
