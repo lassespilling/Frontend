@@ -66,3 +66,34 @@ h.onclick = function() {
         nav.classList.toggle("toggled");
     }
 }
+
+
+// Fade in elements on scroll
+var animateHTML = function() {
+  var items;
+  var windowHeight;
+  function init() {
+    items = document.querySelectorAll('.hidden');
+    windowHeight = window.innerHeight;
+    addEventHandlers();
+    checkPosition();
+  }
+  function addEventHandlers() {
+    window.addEventListener('scroll', checkPosition);
+  }
+  function checkPosition() {
+    for (var i = 0; i < items.length; i++) {
+      var positionFromTop = items[i].getBoundingClientRect().top;
+      if (positionFromTop - windowHeight <= 0) {
+        items[i].className = items[i].className.replace(
+          'hidden',
+          'scrollfade'
+        );
+      }
+    }
+  }
+  return {
+    init: init
+  };
+};
+animateHTML().init();
