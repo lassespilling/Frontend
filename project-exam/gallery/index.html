@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Mars - Contact</title>
+    <meta name="description" content="Raising awareness about the space program. Part of a school project." />
+    <meta name="author" content="Lasse Dollis Spilling" />
+    <meta name="keywords" content="mars, colonies, space program" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1" />
+    
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width:700px)" href="../css/small.css">
+    <link rel="stylesheet" href="../css/icons.min.css">
+</head>
+
+<body id="gallery-page" class="nopreload">
+    <div id="wrapper">
+
+        <nav id="top-nav">
+            <h1 id="mobile-title">Menu</h1>
+            <div class="container">
+                <div id="hamburger">
+                    <span id="lightsaber-1"></span>
+                    <span id="lightsaber-2"></span>
+                    <span id="lightsaber-3"></span>
+                </div>
+            </div>
+            <ul id="toggled-menu">
+                <li id="home-btn"><a href="../">Home</a></li>
+                <li id="gallery-btn"><a href=".">Gallery</a></li>
+                <li id="timeline-btn"><a href="../timeline/">Timeline</a></li>
+                <li id="contact-btn"><a href="../contact/">Contact</a></li>
+            </ul>
+            <div id="close"></div>
+        </nav>
+
+        <header id="intro">
+            <div id="top-logo">
+                <img src="../img/logo.svg" alt="Logo">
+            </div>
+            <div id="sticky-logo">
+                <a href=".">
+            <img src="../img/logo.svg" alt="Logo">
+        </a>
+            </div>
+        </header>
+
+        <section id="gallery" class="grid-sm-0 grid-md-12">
+        <img src="../img/falcon.png" alt="spaceship" id="falcon" class="hidden col-md-s-9 col-md-e-11">
+
+        <div class="col-md-s-3 col-md-e-10 grid-md-8 box">
+            <div class="p-3 col-md-12 t-center">
+                <img src="../img/nasa-logo.svg" alt="Nasa logo" class="hidden nasa-logo inline w-h1 m-1">
+                <h1 class="hidden inline">Gallery</h1>
+            </div>
+
+            <button id="previous" class="hidden col-md-s-1 col-md-1">
+            <span class="typcn typcn-chevron-left"></span>
+        </button>
+            <ul class="hidden gallery col-md-6" id="the-gallery"></ul>
+            <button id="next" class="hidden col-md-1">
+            <span class="typcn typcn-chevron-right"></span>
+        </button>
+
+            <div class="hidden p-3 col-md-12 t-center">
+                <div class="btn" id="historic">Historic mode</div>
+            </div>
+        </div>
+    </section>
+    </div>
+    
+<script src="../scripts/navigation.js"></script>
+<script src="../scripts/gallery.js"></script>
+</body>
+
+</html>

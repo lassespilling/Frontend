@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Mars - A space program future</title>
+    <meta name="description" content="Raising awareness about the space program. Part of a school project." />
+    <meta name="author" content="Lasse Dollis Spilling" />
+    <meta name="keywords" content="mars, colonies, space program" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width:700px)" href="css/small.css">
+    <link rel="stylesheet" href="css/icons.min.css">
+</head>
+
+<body class="noscroll">
+    <div id="preloader">
+        <img src="img/logo.svg" alt="logo" id="intrologo">
+        <a id="enter" class="btn-fill">Enter</a>
+        <a id="skip" class="btn">Skip intro</a>
+        <div id="longtimeago"><img src="img/longtimeago.svg" alt="A long time ago text"></div>
+        <div id="rightnow"><img src="img/rightnow.svg" alt="right now text"></div>
+        <div id="hyperspeed"></div>
+    </div>
+    <audio preload="auto" id="prelude">
+    <source src="sound/starwars.ogg" type="audio/ogg" />
+    <source src="sound/starwars.mp3" type="audio/mpeg" />
+    </audio>
+    
+    <div class="modal" id="rover-modal">
+        <div class="exit-modal" onclick="closeModal(rover)"></div>
+        <div class="modal-window">
+            <a class="modal-close-btn" onclick="closeModal(rover)"><span class="typcn typcn-delete"></span></a>
+            <h1>Rover</h1>
+            <div class="article">
+                <h3>Watch NASA Build Its Next Mars Rover</h3>
+                <a href="https://mars.nasa.gov/news/8447/watch-nasa-build-its-next-mars-rover/"><img src="img/articles/rover1.jpg" alt="The View from the Seeing 2020 Webcam"></a>
+                <a href="https://mars.nasa.gov/news/8447/watch-nasa-build-its-next-mars-rover/" class="source">View article<span class="typcn typcn-arrow-forward"></span></a>
+            </div>
+            <div class="article">
+                <h3>The next rover will offer the clearest view of Mars yet</h3>
+                <a href="https://edition.cnn.com/2019/06/05/world/mars-2020-rover-eyes-trnd-scn/index.html"><img src="img/articles/rover2.jpg" alt="The View from the Seeing 2020 Webcam"></a>
+                <a href="https://edition.cnn.com/2019/06/05/world/mars-2020-rover-eyes-trnd-scn/index.html" class="source">View article<span class="typcn typcn-arrow-forward"></span></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="colony-modal">
+        <div class="exit-modal" onclick="closeModal(colony)"></div>
+        <div class="modal-window">
+            <a class="modal-close-btn" onclick="closeModal(colony)"><span class="typcn typcn-delete"></span></a>
+            <h1>Colonies</h1>
+            <div class="article">
+                <h3>Babies born today will see first ‘self-sustaining human colony’ on MARS – but experts are warning against ‘mass immigration’ to red planet</h3>
+                <a href="https://www.thesun.co.uk/tech/9262513/babies-born-today-first-mars-colony/"><img src="img/articles/colony1.jpg" alt="Mars Colony"></a>
+                <a href="https://www.thesun.co.uk/tech/9262513/babies-born-today-first-mars-colony/" class="source">View article<span class="typcn typcn-arrow-forward"></span></a>
+            </div>
+            <div class="article">
+                <h3>Making a Garden on the Red Planet: How Could We Colonize/Terraform Mars?</h3>
+                <a href="https://interestingengineering.com/making-a-garden-on-the-red-planet-how-could-we-colonize-terraform-mars"><img src="img/articles/colony2.jpg" alt="Mars Terraforming"></a>
+                <a href="https://interestingengineering.com/making-a-garden-on-the-red-planet-how-could-we-colonize-terraform-mars" class="source">View article<span class="typcn typcn-arrow-forward"></span></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="spacetourism-modal">
+        <div class="exit-modal" onclick="closeModal(spacetourism)"></div>
+        <div class="modal-window">
+            <a class="modal-close-btn" onclick="closeModal(spacetourism)"><span class="typcn typcn-delete"></span></a>
+            <h1>Space Tourism</h1>
+            <div class="article">
+                <h3>Space tourism will soon be reality</h3>
+                <a href="https://www.mynation.com/technology/space-tourism-will-soon-be-reality-pstiuv"><img src="img/articles/spacetourism1.jpg" alt="Rocket Launching"></a>
+                <a href="https://www.mynation.com/technology/space-tourism-will-soon-be-reality-pstiuv" class="source">View article<span class="typcn typcn-arrow-forward"></span></a>
+            </div>
+            <div class="article">
+                <h3>So, You Want to Be a Space Tourist?</h3>
+                <a href="https://observer.com/2019/06/international-space-station-commercial-business-tourism/"><img src="img/articles/spacetourism2.jpg" alt="SpaceX Dragon"></a>
+                <a href="https://observer.com/2019/06/international-space-station-commercial-business-tourism/" class="source">View article<span class="typcn typcn-arrow-forward"></span></a>
+            </div>
+            <div class="article">
+                <h3>Space Tourism Is About to Push Civilian Astronaut Medicine Into the Final Frontier</h3>
+                <a href="https://www.space.com/space-tourism-flights-health-risks.html"><img src="img/articles/spacetourism3.jpg" alt="Virgin Galactic's suborbital vehicle made its second flight to space"></a>
+                <a href="https://www.space.com/space-tourism-flights-health-risks.html" class="source">View article<span class="typcn typcn-arrow-forward"></span></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="moon-modal">
+        <div class="exit-modal" onclick="closeModal(moon)"></div>
+        <div class="modal-window">
+            <a class="modal-close-btn" onclick="closeModal(moon)"><span class="typcn typcn-delete"></span></a>
+            <h1>Moon to Mars</h1>
+            <div class="article">
+                <h3>Explore Moon to Mars</h3>
+                <a href="https://www.nasa.gov/specials/moon2mars/"><img src="img/articles/moon3.jpg" alt="we are going"></a>
+                <a href="https://www.nasa.gov/specials/moon2mars/" class="source">View article<span class="typcn typcn-arrow-forward"></span></a>
+            </div>
+            <div class="article">
+                <h3>Trump Said The Moon Is Part Of Mars And The Internet Did Not Disappoint</h3>
+                <a href="https://www.buzzfeednews.com/article/briannasacks/moon-mars-mars-moon-trump"><img src="img/articles/moon1.jpg" alt="Trump Tweet"></a>
+                <a href="https://www.buzzfeednews.com/article/briannasacks/moon-mars-mars-moon-trump" class="source">View article<span class="typcn typcn-arrow-forward"></span></a>
+            </div>
+            <div class="article">
+                <h3>How Space Station and Moon Missions Will Prep Astronauts for Mars</h3>
+                <a href="https://www.space.com/space-station-and-moon-prep-mars-astronauts.html"><img src="img/articles/moon2.jpg" alt="NASA astronaut Karen Nyberg uses a fundoscope"></a>
+                <a href="https://www.space.com/space-station-and-moon-prep-mars-astronauts.html" class="source">View article<span class="typcn typcn-arrow-forward"></span></a>
+            </div>
+        </div>
+    </div>
+
+<div id="wrapper">
+    <nav id="top-nav">
+        <h1 id="mobile-title">Menu</h1>
+        <div class="container">
+            <div id="hamburger">
+                <span id="lightsaber-1"></span>
+                <span id="lightsaber-2"></span>
+                <span id="lightsaber-3"></span>
+            </div>
+        </div>
+        <ul id="toggled-menu">
+            <li id="home-btn"><a href=".">Home</a></li>
+            <li id="gallery-btn"><a href="gallery/">Gallery</a></li>
+            <li id="timeline-btn"><a href="timeline/">Timeline</a></li>
+            <li id="contact-btn"><a href="contact/">Contact</a></li>
+        </ul>
+        <div id="close"></div>
+    </nav>
+
+    <header id="intro">
+        <div id="top-logo">
+            <img src="img/logo.svg" alt="Logo">
+        </div>
+        <div id="sticky-logo">
+            <a href=".">
+        <img src="img/logo.svg" alt="Logo">
+    </a>
+        </div>
+    </header>
+    
+    <main>
+    <section id="mars">
+        <div class="container">
+            <div class="grid-sm-0 grid-md-12">
+                <h1 id="mars-title" class="hidden col-sm-s-1 col-sm-e-12 col-md-s-6 col-md-e-9">To Mars<br>we musk</h1>
+                <div class="col-md-s-3 col-md-e-10">
+                    <ul id="mars-cards" class="grid-md-3 gap-col-md-1 gap-row-md-3">
+                        <li id="card-1" class="col-sm-12 col-md-1 hidden">
+                            <a class="btn-fill" onclick="openModal(rover)">
+                    <span>Articles</span>
+                    <span class="typcn typcn-arrow-maximise"></span>
+                </a>
+                            <h2>Rover</h2>
+                            <div class="non-skew-img">
+                                <img src="img/rover.jpg" alt="Rover driving on Mars">
+                            </div>
+                            <div class="highlight"></div>
+                        </li>
+                        <li id="card-2" class="col-sm-12 col-md-1 hidden">
+                            <a class="btn-fill" onclick="openModal(colony)">
+                    <span>Articles</span>
+                    <span class="typcn typcn-arrow-maximise"></span>
+                </a>
+                            <h2>Colonies</h2>
+                            <div class="non-skew-img">
+                                <img src="img/colonies.jpg" alt="Rover driving on Mars">
+                            </div>
+                            <div class="highlight"></div>
+                        </li>
+                        <li id="card-3" class="col-sm-12 col-md-1 hidden">
+                            <a class="btn-fill" onclick="openModal(spacetourism)">
+                    <span>Articles</span>
+                    <span class="typcn typcn-arrow-maximise"></span>
+                </a>
+                            <h2>Space <br>Tourism</h2>
+                            <div class="non-skew-img">
+                                <img src="img/astronaut.jpg" alt="Rover driving on Mars">
+                            </div>
+                            <div class="highlight"></div>
+                        </li>
+                        <li id="card-4" class="col-sm-12 col-md-2 hidden">
+                            <a href="timeline/" class="btn-fill">
+                    <span>View Timeline</span>
+                    <span class="typcn typcn-arrow-right"></span>
+                </a>
+                            <h2>History</h2>
+                            <div class="non-skew-img">
+                                <img src="img/timeline/nasa-founding.jpg" alt="Founding of nasa">
+                            </div>
+                            <div class="highlight"></div>
+                        </li>
+                        <li id="card-5" class="col-sm-12 col-md-1 hidden">
+                            <a class="btn-fill" href="https://www.space.com/31744-star-wars-space-exploration.html">
+                    <span>Read</span>
+                    <span class="typcn typcn-arrow-forward"></span>
+                </a>
+                            <h2>Star Wars <br>&amp; Real Space</h2>
+                            <div class="non-skew-img">
+                                <img src="img/starwars.jpg" alt="Star Wars">
+                            </div>
+                            <div class="highlight"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="moon">
+        <div class="grid-md-12">
+            <div id="footprints-bg" class="hidden "></div>
+            <img src="img/footprint.png" alt="footprint" id="footprint" class="hidden col-sm-s-2 col-sm-e-11 col-md-s-2 col-md-e-7">
+            <div class="hidden h-qoute full-qoute col-md-s-5 col-md-e-7">
+                <p class="qoute-text">
+                    Don't tell me the sky is the limit, when there's footprints on the moon.
+                </p>
+                <p class="qoute-name">
+                    Paul Brand
+                </p>
+            </div>
+        </div>
+        <div class="grid-md-12 bottom" id="moon-title">
+            <h1 class="hidden col-md-s-5 col-md-e-8 pt-5 row-md-s-2">From luna to mars</h1>
+            <img src="img/moon-1.jpg" alt="" id="moon-img-1" class="hidden col-md-s-11 col-md-e-12">
+        </div>
+        <div class="grid-md-12">
+            <div class="col-md-s-3 col-md-e-10 grid-md-8 box mt-3">
+                <div class="v-qoute col-md-2 row-md-3">
+                    <p class="hidden qoute-text">
+                        Love you to <br> the moon &amp; back.
+                    </p>
+                    <p class="hidden qoute-name">
+                        Famous saying
+                    </p>
+
+                    <a href="http://www.seasky.org/quotes/space-quotes-astronomy.html" class="hidden btn">Qoutes <span class="typcn typcn-arrow-forward"></span></a>
+                </div>
+                <h2 class="hidden col-md-3 pt-3 pb-2">Using the moon as a pitstop</h2>
+                <p class="hidden col-md-s-4 col-md-e-7 pr-3">
+                    In the last few years, there have been discussions of building a lunar base to use as a refuelling station for the Mars missions.
+
+                    <br><br> Water ice found on the Moon and Mars could be used to produce rocket fuel, as well as providing water and oxygen for the astronauts.
+                </p>
+                <img src="img/moon-2.jpg" alt="" id="moon-img-2" class="hidden pt-2 col-md-s-5 col-md-e-8">
+                <a class="btn-fill" onclick="openModal(moon)">
+                <span>Articles</span>
+                <span class="typcn typcn-arrow-maximise"></span>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="colonies" class="grid-md-12">
+
+        <picture class="hidden col-md-12">
+            <source media="(min-width: 701px)" srcset="img/colonies-heroimg.jpg">
+            <img src="img/colonies-heroimg-small.jpg" alt="Colonies on mars" id="hero-img">
+        </picture>
+
+        <div class="col-sm-12 col-md-s-3 col-md-e-10 grid-md-8 box p-3">
+            <h1 class="hidden col-md-12 t-center h2">Colonies on mars</h1>
+
+            <p class="hidden col-md-s-2 col-md-e-7">
+                The recent surge in exploration, as well as the discoveries that Mars was once habitable, has led to renewed interest in sending humans to Mars, and not just to explore. There are even plans to send people there to create a permanent presence there, which
+                may or may not involve ecologically engineering the planet to make it more Earth-like; that is, terraforming it.
+            </p>
+
+            <div class="hidden pt-2 col-md-12 t-center">
+                <a class="btn-fill" onclick="openModal(colony)">
+                <span>Articles</span>
+                <span class="typcn typcn-arrow-maximise"></span>
+            </a>
+            </div>
+            <img src="img/vader.png" alt="Vader on segway" class="hidden col-md-s-8" id="vader">
+        </div>
+
+    </section>
+    </main>
+
+    <footer class="grid-md-12">
+
+        <h1 class="hidden col-md-s-3 col-md-e-6 md-bottom">To be continued.</h1>
+        <img src="img/footer-1.jpg" alt="" id="footerimg-1" class="hidden col-md-s-10 col-md-e-12">
+
+        <div class="hidden box col-md-9 grid-md-9 gap-row-md-5">
+            <div class="hidden v-qoute col-md-3 p-4">
+                <p class="hidden qoute-text">
+                    All vicilizations become <br>either spacefaring or extinct.
+                </p>
+                <p class="hidden qoute-name">
+                    Carl Sagan
+                </p>
+            </div>
+            <img src="img/footer-2.jpg" alt="" id="footer-img-2" class="hidden col-md-s-6 col-md-e-9">
+
+            <a href="." class="hidden col-md-3 p-4 col-sm-12"><img src="img/logo.svg" alt="logo" id="footer-logo"></a>
+            <div class="hidden social col-sm-12 col-md-s-6 col-md-e-9 grid-md-3 p-3">
+                <h2 class="col-md-3">Follow us</h2>
+                <a href="https://www.instagram.com/">
+                <img src="img/instagram.svg" alt="Instagram">
+            </a>
+                <a href="www.googleplus.com">
+                <img src="img/googleplus.svg" alt="Google Plus">
+            </a>
+                <a href="https://twitter.com/">
+                <img src="img/twitter.svg" alt="Twitter">
+            </a>
+                <a href="https://www.snapchat.com/l/en-gb/">
+                <img src="img/snapchat.svg" alt="Snapchat">
+            </a>
+                <a href="https://www.youtube.com/">
+                <img src="img/youtube.svg" alt="Youtube">
+            </a>
+                <a href="https://www.facebook.com/">
+                <img src="img/facebook.svg" alt="Facebook">
+            </a>
+            </div>
+
+        </div>
+    </footer>
+</div>
+
+<script src="scripts/navigation.js"></script>
+<script src="scripts/homepage.js"></script>
+</body>
+
+</html>

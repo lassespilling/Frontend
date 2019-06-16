@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Mars - Contact</title>
+    <meta name="description" content="Raising awareness about the space program. Part of a school project." />
+    <meta name="author" content="Lasse Dollis Spilling" />
+    <meta name="keywords" content="mars, colonies, space program" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width:700px)" href="../css/small.css">
+    <link rel="stylesheet" href="../css/icons.min.css">
+</head>
+
+<body id="timeline-page" class="nopreload">
+    <div id="wrapper">
+
+        <nav id="top-nav">
+            <h1 id="mobile-title">Menu</h1>
+            <div class="container">
+                <div id="hamburger">
+                    <span id="lightsaber-1"></span>
+                    <span id="lightsaber-2"></span>
+                    <span id="lightsaber-3"></span>
+                </div>
+            </div>
+            <ul id="toggled-menu">
+                <li id="home-btn"><a href="../">Home</a></li>
+                <li id="gallery-btn"><a href="../gallery/">Gallery</a></li>
+                <li id="timeline-btn"><a href="../timeline/">Timeline</a></li>
+                <li id="contact-btn"><a href=".">Contact</a></li>
+            </ul>
+            <div id="close"></div>
+        </nav>
+
+        <header id="intro">
+            <div id="top-logo">
+                <img src="../img/logo.svg" alt="Logo">
+            </div>
+            <div id="sticky-logo">
+                <a href=".">
+            <img src="../img/logo.svg" alt="Logo">
+        </a>
+            </div>
+        </header>
+
+        <section id="contact" class="grid-md-12 grid-sm-0">
+            <div class="col-md-s-3 col-md-e-10 grid-md-8 box-dark p-4 gap-md-1">
+                <div class="col-md-4">
+                    <h2 id="questions">Got any questions?</h2>
+                    <h1>Get in touch</h1>
+                </div>
+
+                <form action="" id="theform" onsubmit="return validateForm()" class="col-md-4">
+                    <p>
+                        <label for="fullname"><span>Full </span><span>name:</span></label>
+                        <input type="text" name="fullname" id="fullname" autocomplete="name">
+                        <span id="full-name-errors" class="errors"></span>
+                    </p>
+                    <p>
+                        <label for="phone"><span>Phone </span><span>number:</span></label>
+                        <input type="tel" name="phone" id="phone" autocomplete="tel" placeholder="+xx xxx xxx xx">
+                        <span id="phone-errors" class="errors"></span>
+                    </p>
+                    <p>
+                        <label for="email"><span>E-mail </span><span>adress:</span></label>
+                        <input type="email" name="email" id="email" autocomplete="email" placeholder="___@___.___">
+                        <span id="email-errors" class="errors"></span>
+                    </p>
+                    <p>
+                        <label for="message"><span>Your </span><span>message:</span></label>
+                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                        <span id="message-errors" class="errors"></span>
+                    </p>
+                    <button type="button" class="btn-fill" id="form-submit">Submit</button>
+                </form>
+
+                <ul id="email-errors"></ul>
+            </div>
+        </section>
+    </div>
+    <script src="../scripts/navigation.js"></script>
+    <script src="../scripts/form.js"></script>
+
+</body>
+</html>
